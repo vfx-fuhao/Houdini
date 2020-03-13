@@ -1,31 +1,53 @@
-# EVE: Houdini Pipeline Toolkit
+# Eve: Out of the box Houdini Pipeline
+[![](https://live.staticflickr.com/65535/48087908673_fb38ed89fe_o.jpg)](https://live.staticflickr.com/65535/48087908673_fb38ed89fe_o.jpg)
 
 ### Introduction
-This repository is a Houdini Pipeline Toolkit named "EVE", currently at the early stages of developing. 
-The goal is to create **out of the box VFX pipeline** for **Houdini** and **Nuke** applications under control of Shotgun project management system
-for a single artist or animation studio. It is full CG oriented pipeline which can handle small tasks with just a few shots as well as huge projects like animation feature or TV series.
+"Eve" is an **out of the box VFX pipeline** for Houdini application on Windows OS. It is a full CG oriented pipeline which can 
+handle small tasks with just a few shots as well as huge projects like animation feature or TV series. Eve does not 
+provide any particular solutions for any of CG techniques like modeling, rendering etc, its just allows to structure all 
+necessary data storage and exchange. In other words, Eve is an **abstract data management tool** for your Houdini projects.
 
-The pipeline would be heavily rely on [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) structure and ideas.
+No matter how you would create your model, Eve will provide [tools](https://github.com/kiryha/Houdini/wiki/tools)
+ to save the scene, share results for the next pipeline steps, version and publish working files.
 
-### How to use
-Download repository as a zip file, extract to any temp location and run **setupProject.bat**. 
-Select directory to hold the project, enter project name and press "CREATE PROJECT" to build a project folder structure with a pipeline.
+### How to use Eve
+[Install necessary components](https://github.com/kiryha/Houdini/wiki/pipeline-tutorials#installation). 
+Clone this repository to a local drive and run **Project Creator** tool with `createProject.bat`. Select directory to hold the new project under 
+`Eve` control, enter project name and press "Create New Project" button to build a folder structure with necessary data.
 
-Check [installation tutorial](https://github.com/kiryha/Houdini/wiki/pipeline-tutorials#requirments-and-installation) for more details.
+Create assets and shots in database with **Project Manager** tool and you ar ready to produce the CGI magic with Houdini!
+
+Project Manager is a system which controls your pipeline data. It serves to replicate basic Shotgun functionality. 
+[![](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)](https://live.staticflickr.com/65535/48056687948_124c55d2fe_o.gif)
+
+Check [Eve tutorials](https://github.com/kiryha/Houdini/wiki/pipeline-tutorials) for quick start.
 
 ### Learning database
-Despite the tools are not ready yet, Houdini learning database is full of useful materials, and it constantly updates.
-Example Houdini scenes are located in the **hips** folder.
- 
-Go and check examples and tutorials in [Houdini pipeline wiki](https://github.com/kiryha/Houdini/wiki)!
+Attempt to make first steps with Houdini, Programming or Math? In addition to `Eve` specific materials, we have plenty of Houdini tutorials! 
 
-### Requirements
-Windows, Python 2.7, PySide
+The best places to start with VEX and Python:
+- [VEX for artists](https://github.com/kiryha/Houdini/wiki/vex-for-artists)  
+- [Python for artists](https://github.com/kiryha/Houdini/wiki//python-for-artists)
+
+Don't miss [Programming basics](https://github.com/kiryha/Houdini/wiki//programming-basics) if you don't have programming experience!
+
+Applied Python in Houdini: [Python snippets](https://github.com/kiryha/Houdini/wiki/python-snippets)  
+Applied VEX: [VEX snippets](https://github.com/kiryha/Houdini/wiki//vex-snippets)   
+Small solutions as a HIP files: [HIP Examples](https://github.com/kiryha/Houdini/wiki//examples)
 
 ### Current state
 Supported OS: Windows  
-Working [tools](https://github.com/kiryha/Houdini/wiki/tools):  
+
+Working [Tools](https://github.com/kiryha/Houdini/wiki/tools):  
 - **Create project**: Build a folder structure for the new project with pipeline data and tools
 - **Save next version**: Incremental save current scene
-- **Create scene**: Build a render scene with all necessary components (environment, caches, materials etc)
+- **Project Manager**: "Shotgun" for free, assets and shots management tool.
 - **Create flipbook**: Make a hardware render of shot camera and place it to a proper location with version control
+- **Render Farm**: Render list of HIP files
+
+### History
+"Eve" is an evolution of my VFX pipeline [Animation DNA](https://github.com/kiryha/AnimationDNA/wiki) used to 
+create our [first Ukrainian 3D Animation film](https://www.imdb.com/title/tt5954304/). The core logic remains the same, 
+I just switch from Maya to Houdini. The developing was done during personal project creation, [The Beauty](https://vimeo.com/343421950) music video:
+
+[![](https://live.staticflickr.com/65535/48093904051_82f1509e49_o.jpg)](https://live.staticflickr.com/65535/48093904051_82f1509e49_o.jpg)
